@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 60px;
+  /* background-color: #333; */
+}
+
+h1 {
+  color: #eaaa00;
+  font-size: 50px;
+  font-family: "Barriecito", cursive;
+}
+
+/* show list section */
+/* the div that contains all the shows */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.show-item {
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.show-item img {
+  border-radius: 10px;
+  display: block;
+}
+
+/* what the overlay layer looks like when it's not hover */
+.content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 10px;
+}
+
+.content:hover {
+  opacity: 1;
+}
+
+/* toggle section */
+button {
+  background-color: transparent;
+  font-family: "Barriecito", cursive;
+  color: #fff;
+  font-size: 30px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-color: #eaaa00;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* only need to write what will be chnaged */
+button:hover {
+  background-color: #eaaa00;
+  color: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  button {
+    margin: 0 20px;
+  }
+}
